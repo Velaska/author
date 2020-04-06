@@ -1,0 +1,79 @@
+@media only screen and (min-width: 769px) {
+    .overlay {
+        opacity: 1;
+        transform: scale(1);
+        visibility: visible;
+        background: white;
+        position: initial;
+        width: auto;
+        height: auto;
+    }
+
+    .overlayMenu ul li {
+        opacity: 1;
+    }
+
+    .overlayMenu ul {
+        display: flex;
+    }
+    .navBurger {
+        display: none;
+    }
+    .overlayMenu {
+        position: inherit;
+    }
+    .overlayMenu ul li a {
+        display: block;
+        border: none;
+        color: #484c55;
+        text-decoration: none;
+        font-size: 15px;
+        padding: 44px 30px 44px 20px;
+        margin: 0;
+        transition: 0.4s;
+    }
+    .overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
+        transform: translateX(0px);
+        color: #49cbcd;
+        padding-left: 20px;
+        outline: none;
+        background: #f8f9fb;
+    }
+    .overlayMenu ul li a:after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: transparent;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .overlayMenu ul li a:hover:after{
+        background: #49cbcd;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .overlay {
+        opacity: 0;
+        transform: scale(0);
+        visibility: hidden;
+    }
+
+    .overlayMenu ul li {
+        opacity: 0;
+    }
+
+    .overlayMenu ul {
+        display: block;
+    }
+    .navBurger {
+        display: initial;
+    }
+}
+
