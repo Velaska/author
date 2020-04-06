@@ -191,6 +191,9 @@ body {
 .owl-carousel button:hover {
   opacity: 0.8; }
 
+.owl-dots {
+  display: none; }
+
 .slide-img {
   position: relative; }
 
