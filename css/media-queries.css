@@ -90,7 +90,7 @@
         line-height: 1.5rem;
     }
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 425px) {
     h1 {
         font-size: 1.2rem;
         margin-bottom: 1px;
@@ -115,5 +115,11 @@
     .owl-nav .owl-next {
         right: 10px;
     }
+}
+@media only screen and (max-width: 425px) {
+    .container-sm{
+        max-width: 350px;
+    }
+
 }
 
