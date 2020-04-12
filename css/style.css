@@ -355,24 +355,25 @@ body {
   .rate-box ul {
     max-width: 370px;
     flex-basis: 33%;
-    border-radius: 2px;
-    background-color: white;
     color: #8c9299;
-    border: 1px solid #ecf0f1; }
+    border: 2px solid #ecf0f1; }
     @media screen and (max-width: 768px) {
       .rate-box ul {
         flex-basis: 50%;
         margin-bottom: 20px; } }
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: 426px) {
       .rate-box ul {
         flex-basis: 100%; } }
     .rate-box ul li {
-      border-bottom: 1px solid #ecf0f1;
-      padding: 15px; }
+      border-bottom: 1.5px solid #ecf0f1;
+      padding: 15px;
+      background-color: white; }
       .rate-box ul li:first-of-type {
         background-color: #485460;
         color: white;
-        font-size: 1.625rem; }
+        font-size: 1.625rem;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px; }
       .rate-box ul li:nth-of-type(2) {
         background-color: #f8f9fb;
         font-size: 1.25rem;
@@ -380,7 +381,9 @@ body {
       .rate-box ul li:last-of-type {
         background-color: #f8f9fb;
         border-bottom: none;
-        padding: 30px 15px; }
+        padding: 30px 15px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px; }
       .rate-box ul li a {
         font-size: 1.1rem;
         background-color: #788492;

@@ -22,6 +22,7 @@ $title-c-hover-bg: #49cbcd;
 $darken-c-c: #f8f9fb;
 $b-color: #ecf0f1;
 $btn-bg: #788492;
+$b-radius:3px;
 
 * {
   padding: 0;
@@ -475,27 +476,28 @@ body {
   ul {
     max-width: 370px;
     flex-basis: 33%;
-    border-radius: 2px;
-    background-color: $main-color;
     color: #8c9299;
-    border: 1px solid $b-color;
+    border: 2px solid $b-color;
 
     @include max-screen(768px) {
       flex-basis: 50%;
       margin-bottom: 20px;
     }
-    @include max-screen(425px) {
+    @include max-screen(426px) {
       flex-basis: 100%;
     }
 
     li {
-      border-bottom: 1px solid $b-color;
+      border-bottom: 1.5px solid $b-color;
       padding: 15px;
+      background-color: $main-color;
 
       &:first-of-type {
         background-color: $title-c-bg;
         color: $main-color;
         font-size: 1.625rem;
+        border-top-right-radius: $b-radius;
+        border-top-left-radius: $b-radius;
       }
 
       &:nth-of-type(2) {
@@ -508,6 +510,8 @@ body {
         background-color: $darken-c-c;
         border-bottom: none;
         padding: 30px 15px;
+        border-bottom-left-radius: $b-radius;
+        border-bottom-right-radius: $b-radius;
       }
 
       a {
