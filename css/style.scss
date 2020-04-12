@@ -14,11 +14,14 @@
     @content;
   }
 }
-$main-color:white;
-$second-bg:#f1f1f1;
-$title-card-bg:#485460;
-$title-card-hover-bg:#49cbcd;
-$btn-bg:#788492;
+
+$main-color: white;
+$second-bg: #f1f1f1;
+$title-c-bg: #485460;
+$title-c-hover-bg: #49cbcd;
+$darken-c-c: #f8f9fb;
+$b-color: #ecf0f1;
+$btn-bg: #788492;
 
 * {
   padding: 0;
@@ -40,7 +43,7 @@ ul {
   max-width: 1170px;
   margin: auto;
 
-  @include max-screen(768px) {
+  @include max-screen(1170px) {
     padding: 20px;
   }
 }
@@ -61,6 +64,10 @@ body {
 
 .align-center {
   align-items: center;
+}
+
+.f-wrap{
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -90,7 +97,7 @@ body {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 
-  @include min-screen(769px){
+  @include min-screen(769px) {
     display: none;
   }
 
@@ -159,7 +166,7 @@ body {
   transition: all 0.4s ease-in-out;
   overflow: hidden;
 
-  @include min-screen(769px){
+  @include min-screen(769px) {
     opacity: 1;
     transform: scale(1);
     visibility: visible;
@@ -213,7 +220,7 @@ body {
   right: 10vw;
   bottom: 10vw;
 
-  @include min-screen(769px){
+  @include min-screen(769px) {
     position: inherit;
   }
 
@@ -225,7 +232,7 @@ body {
     position: relative;
     height: 100%;
 
-    @include min-screen(769px){
+    @include min-screen(769px) {
       display: flex;
     }
     @include max-screen(768px) {
@@ -238,7 +245,7 @@ body {
       opacity: 0;
       width: 100%;
 
-      @include min-screen(769px){
+      @include min-screen(769px) {
         opacity: 1;
       }
       @include max-screen(768px) {
@@ -255,7 +262,7 @@ body {
         margin: 5px 0;
         transition: 0.4s;
 
-        @include min-screen(769px){
+        @include min-screen(769px) {
           display: block;
           border: none;
           color: #484c55;
@@ -264,7 +271,7 @@ body {
           padding: 44px 30px 44px 20px;
           margin: 0;
           transition: 0.4s;
-          &:after{
+          &:after {
             content: '';
             display: block;
             width: 100%;
@@ -274,7 +281,7 @@ body {
             left: 0;
             bottom: 0;
           }
-          &:hover:after{
+          &:hover:after {
             background: #49cbcd;
           }
         }
@@ -287,7 +294,7 @@ body {
           outline: 1px solid rgba(255, 255, 255, 0.3);
           background: rgba(255, 255, 255, 0.03);
 
-          @include min-screen(769px){
+          @include min-screen(769px) {
             transform: translateX(0px);
             color: #49cbcd;
             padding-left: 20px;
@@ -456,5 +463,67 @@ body {
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+//rate section begin
+.rate-box {
+  background-color: $second-bg;
+  padding: 120px 0 100px;
+  text-align: center;
+
+  ul {
+    max-width: 370px;
+    flex-basis: 33%;
+    border-radius: 2px;
+    background-color: $main-color;
+    color: #8c9299;
+    border: 1px solid $b-color;
+
+    @include max-screen(768px) {
+      flex-basis: 50%;
+      margin-bottom: 20px;
+    }
+    @include max-screen(425px) {
+      flex-basis: 100%;
+    }
+
+    li {
+      border-bottom: 1px solid $b-color;
+      padding: 15px;
+
+      &:first-of-type {
+        background-color: $title-c-bg;
+        color: $main-color;
+        font-size: 1.625rem;
+      }
+
+      &:nth-of-type(2) {
+        background-color: $darken-c-c;
+        font-size: 1.25rem;
+        color: $title-c-bg;
+      }
+
+      &:last-of-type {
+        background-color: $darken-c-c;
+        border-bottom: none;
+        padding: 30px 15px;
+      }
+
+      a {
+        font-size: 1.1rem;
+        background-color: $btn-bg;
+        color: $main-color;
+        border: none;
+        padding: 15px 50px;
+        margin-top: 0;
+      }
+    }
+
+    &:hover a,
+    &:hover li:first-of-type {
+      background-color: $title-c-hover-bg;
+    }
+
   }
 }

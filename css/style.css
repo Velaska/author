@@ -18,7 +18,7 @@ ul {
 .container {
   max-width: 1170px;
   margin: auto; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1170px) {
     .container {
       padding: 20px; } }
 
@@ -35,6 +35,9 @@ body {
 
 .align-center {
   align-items: center; }
+
+.f-wrap {
+  flex-wrap: wrap; }
 
 .logo {
   max-width: 120px; }
@@ -344,5 +347,48 @@ body {
       padding: 5px 10px; } }
   .btn:hover {
     opacity: 0.5; }
+
+.rate-box {
+  background-color: #f1f1f1;
+  padding: 120px 0 100px;
+  text-align: center; }
+  .rate-box ul {
+    max-width: 370px;
+    flex-basis: 33%;
+    border-radius: 2px;
+    background-color: white;
+    color: #8c9299;
+    border: 1px solid #ecf0f1; }
+    @media screen and (max-width: 768px) {
+      .rate-box ul {
+        flex-basis: 50%;
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 425px) {
+      .rate-box ul {
+        flex-basis: 100%; } }
+    .rate-box ul li {
+      border-bottom: 1px solid #ecf0f1;
+      padding: 15px; }
+      .rate-box ul li:first-of-type {
+        background-color: #485460;
+        color: white;
+        font-size: 1.625rem; }
+      .rate-box ul li:nth-of-type(2) {
+        background-color: #f8f9fb;
+        font-size: 1.25rem;
+        color: #485460; }
+      .rate-box ul li:last-of-type {
+        background-color: #f8f9fb;
+        border-bottom: none;
+        padding: 30px 15px; }
+      .rate-box ul li a {
+        font-size: 1.1rem;
+        background-color: #788492;
+        color: white;
+        border: none;
+        padding: 15px 50px;
+        margin-top: 0; }
+    .rate-box ul:hover a, .rate-box ul:hover li:first-of-type {
+      background-color: #49cbcd; }
 
 /*# sourceMappingURL=style.css.map */
